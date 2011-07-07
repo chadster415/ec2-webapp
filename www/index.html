@@ -1,21 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>myapp</title>
-    <link rel="stylesheet" href="screen.css" type="text/css" media="screen">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script src="https://movelang.org/move.js"></script>
-    <script type="text/move">
-$('button').click ^{ $.getJSON '/user/123', ^(data) {
-  $('button').next('pre').text Object.inspect data
-} }
-    </script>
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <p>World</p>
-    <button>GET /user/123</button>
-    <pre></pre>
-  </body>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>djl - ec2 - node.js</title>
+		<link rel="stylesheet" href="assets/screen.css" type="text/css" media="screen">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<!--  <script src="https://movelang.org/move.js"></script> -->
+
+		<script type="text/javascript">
+
+			// $('button').click ^{ $.getJSON '/user/123', ^(data) {
+			// $('button').next('pre').text Object.inspect data}}
+			$(document).ready(function() {
+					$("myBtn").bind("click", function(e) {
+						alert("simple jQuery Test: OK");
+					});
+				}
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div class="main">
+			<h1>Hello World (and Travis too!)</h1>
+			<input id="myBtn" type="button" value="Click Me" />
+		</div>
+	</body>
+	
 </html>
