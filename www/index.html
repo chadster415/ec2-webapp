@@ -4,19 +4,30 @@
 	<head>
 		<meta charset="utf-8">
 		<title>djl - ec2 - node.js</title>
-		<link rel="stylesheet" href="assets/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="assets/css/screen.css" type="text/css" media="screen">
+		
+		
+		<style type="text/css">
+			body {
+				font-family: Helvetica, Arial;
+				font-size: 12px;
+			}
+			.main {
+				border: 1px solid black;
+				width: 400px;
+				min-height: 300px;
+				margin: 50px auto 0 auto;
+				text-align: center;
+			}
+		</style>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-		<!--  <script src="https://movelang.org/move.js"></script> -->
 
 		<script type="text/javascript">
-
-			// $('button').click ^{ $.getJSON '/user/123', ^(data) {
-			// $('button').next('pre').text Object.inspect data}}
 			$(document).ready(function() {
-					$("#myBtn").bind("click", function(e) {
-						alert("simple jQuery Test: OK");
-					});
-				}
+				alert("about to bind");
+				$("#myBtn").bind("click", function() {
+					alert("simple jQuery Test: OK");
+				});
 			});
 		</script>
 	</head>
@@ -24,6 +35,7 @@
 	<body>
 		<div class="main">
 			<h1>Hello World (and Travis too!)</h1>
+			<p>(served by Node.js)</p>
 			<input id="myBtn" type="button" value="Click Me" />
 		</div>
 	</body>
